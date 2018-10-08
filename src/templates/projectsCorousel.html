@@ -1,0 +1,30 @@
+<div class="projects-support-block">
+    <p class="block-title">Projects we support</p>
+    <slick infinite="true" slides-to-scroll="1"
+        settings="slickConfig" ng-if="projectsArray.length">
+        <div class="slide-content" ng-repeat="thisProject in projectsArray">
+            <div class="project-card-detail">
+                <img class="project-image" ng-src="{{thisProject.photos[0].image}}" ng-click="goToProjectDetail(thisProject.id, thisProject.title)">
+                <div class="project-details">
+                    <p class="project-title" ng-click="goToProjectDetail(thisProject.id, thisProject.title)">{{thisProject.title}}</p>
+                    <p class="project-detail-common display-flex-center"><span class="location-icon"></span>{{thisProject.city}}, {{thisProject.country}}</p>
+                    <p class="project-detail-common display-flex-center"><span class="co2-reduced-icon"></span>{{thisProject.co2_impact}} Tonnes </span> CO<sub>2</sub> &nbsp;Reduced</p>
+                    <p class="project-description">
+                        {{thisProject.name}}
+                    </p>
+                    <div class="project-progress-bar">
+                        <div class="progress-completed" ng-style="{width: thisProject.goal_acheived}"></div>
+                    </div>
+                    <div class="goal-acheived">{{thisProject.goal_acheived}} goal acheived</div>
+                    <div class="project-stats">
+                        <p class="project-detail-common font-weight-bold">₹{{thisProject.achieved_funding}} <span class="font-size-10">collected by 240 people</span></p>
+                        <p class="project-detail-common font-weight-bold">₹{{thisProject.target_funding}} <span class="font-size-10">goal</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </slick>
+    <div class="view-projects-footer">
+        <button class="btn btn-primary view-projects-button" ng-click="goToViewProjects();">VIEW MORE PROJECTS</button>
+    </div>
+</div>

@@ -1,0 +1,150 @@
+<div class="website-max-width">
+    <div class="secondary-nav" ng-if="!isMobile">
+        <a href ng-click="goBack()" class="go-back-link">Go back</a>
+        <div>{{header}}</div>
+        <div ng-show="showUserIcon" style="position: absolute;right: 60px;top: 14px;">
+            <img class="logout-dropdown-icon" ng-show="!profilePicLink" style="width: 30px; cursor: pointer;"
+                src="../src/images/illustrations/user.svg">
+            <img class="logout-dropdown-icon" ng-show="profilePicLink"
+                       style="width: 30px; cursor: pointer;" ng-src="{{profilePicLink}}">
+            <div class="logout-dropdown">
+                Logout
+            </div>
+        </div>
+    </div>
+    <div class="project-payment-container">
+        <!-- <div class="project-info-header" ng-if="projectId">
+            <p class="project-name">{{header}}</p>
+        </div> -->
+        <div class="trigger-backers-list" ng-click="showBackersList = true">
+            <p ng-if="backersList.length">{{backersList.length}} People backed this project</p>
+            <p ng-if="!backersList.length">Be the first to back this project</p>
+            <img ng-if="backersList.length" src="../src/images/illustrations/trigger-backers-icon.svg">
+        </div>
+        <div class="container-fluid mobile-background">
+            <div class="payment-info-block row">
+                <div class="col-md-9 col-sm-9 mobile-pad-0">
+                    <p class="pay-text">Select amount to pay</p>
+                    <div class="payment-block-desktop">
+                        <div class="payment-top-block">
+                            <div ng-show="!showEnterOwnAmount" ng-repeat="option in paymentOption" class="option-item">
+                                <div class="option-caption">{{option.caption}}</div>
+                                <div ng-class="{'selected-payment-option': option.type === selectedPaymentOption}" class="payment-option-block" ng-click="selectPaymentOption(option.type)" ng-model="selectedPaymentOption">
+                                    <span ng-if="option.type !== 'pay_as_you_like'" class="amount-to-pay">₹{{option.amount}}</span>
+                                    <span ng-if="option.type === 'pay_as_you_like' && !ownAmountEntered" class="enter-own-amount">ENTER AMOUNT</span>
+                                    <span ng-if="option.type === 'pay_as_you_like' && ownAmountEntered" class="amount-to-pay">₹{{amountEntered}}</span>
+                                </div>
+                            </div>
+                            <div class="position-relative" ng-show="showEnterOwnAmount">
+                                <div class="option-caption">Pay as you like</div>
+                                <img class="icon-close-payment-block" 
+                                    src="../src/images/illustrations/close-payment-block.svg"
+                                    ng-click="hideEnterOwnAmountBlock()">
+                                <div class="enter-own-amount-block">
+                                    <span class="enter-own-amount">ENTER AMOUNT</span>
+                                    <div>
+                                        <div class="amount-field-block">
+                                            <div class="currency-symbol">₹</div>
+                                            <input class="amount-input-field" type="number" name="amount" ng-model="amountEntered"
+                                                ng-change="validateEnteredAmount(amountEntered)">
+                                        </div>
+                                        <div class="error-state" ng-show="errorMessage">{{errorMessage}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="impact-block">
+                            <div ng-show="!showEnterOwnAmount || validOwnAmount">
+                                <img ng-class="{'impact-illustration-width': object === 'cars'}" class="impact-illustration" src="../src/images/illustrations/image_{{object}}.svg">
+                                <p class="impact-data" ng-bind-html="impact.copy"></p>
+                            </div>
+                            <div ng-show="showEnterOwnAmount && !validOwnAmount">
+                                <img class="impact-illustration impact-illustration-width" src="../src/images/illustrations/weighing-scale.svg">
+                                <p class="impact-data margin-top-1em">
+                                    Enter an amount to see the impact of your contribution on CO<sub>2</sub> reduction.
+                                </p>
+                            </div>
+                            <button class="btn btn-primary pay-button" ng-click="postSession()">PROCEED TO PAY</button>
+                            <div class="margin-top-1em">
+                                <label>
+                                    <input type="checkbox" ng-model="payAnonymously">
+                                    &nbsp;Pay anonymously
+                                </label>
+                                <img class="pay-anonymously-tooltip" data-toggle="tooltip" data-placement="bottom" title="Check this box if you don’t want your name to be visible in the project backers list" src="../src/images/illustrations/tooltip-icon.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-block-mobile">
+                        <div class="payment-option-card" ng-repeat="option in paymentOption"
+                            ng-click="selectPaymentOption(option.type)">
+                            <div class="select-block">
+                                <label class="display-flex">
+                                    <input type="radio" name="payment-option" class="payment-radio-button"
+                                        ng-model="selectedPaymentOption" ng-value="option.type"
+                                        ng-change="selectPaymentOption(option.type)">
+                                    <p class="option-caption">{{option.caption}}</p>
+                                </label>
+                            </div>
+                            <div class="payable-amount-block" ng-if="option.type !== 'pay_as_you_like'">
+                                <p class="amount-to-pay">₹{{option.amount}}</p>
+                            </div>
+                            <div class="details-block-{{option.type}}" ng-show="option.type === selectedPaymentOption">
+                                <div class="amount-field-block" ng-if="option.type === 'pay_as_you_like'">
+                                    <div class="currency-symbol">₹</div>
+                                    <input class="amount-input-field" type="number" name="amount" ng-model="amountEntered"
+                                        ng-change="validateEnteredAmount(amountEntered)">
+                                </div>
+                                <div class="error-state" ng-show="errorMessage">{{errorMessage}}</div>
+                                <div class="impact-block-mobile">
+                                    <div ng-show="validOwnAmount">
+                                        <img class="impact-illustration" src="../src/images/illustrations/image_{{object}}.svg">
+                                        <p class="impact-data" ng-bind-html="impact.copy"></p>
+                                    </div>
+                                    <div ng-show="!validOwnAmount">
+                                        <img class="impact-illustration" src="../src/images/illustrations/weighing-scale.svg">
+                                        <p class="impact-data margin-top-1em">
+                                            Enter an amount to see the impact of your contribution on CO<sub>2</sub> reduction.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backers-list backers-list-desktop col-md-2 col-sm-3 col-md-offset-1 col-sm-offset-0">
+                    <div class="people-count" ng-if="backersList.length">{{backersList.length}} People took action</div>
+                    <div ng-repeat="thisBacker in backersList" class="backer-item">
+                        <img src="{{thisBacker.user.picture_link}}" alt="" class="backer-image">
+                        <div class="backer-basic-info">
+                            <p class="backer-name">{{thisBacker.user.nickname}}</p>
+                            <p class="backer-location">₹{{thisBacker.amount}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="backers-list-mobile" ng-show="showBackersList">
+                    <img class="close-modal-mobile" src="../../src/images/illustrations/ic-cross.svg" ng-click="showBackersList = false;">
+                    <div class="">{{backersList.length}} People backed this project</div>
+                    <div ng-repeat="thisBacker in backersList" class="backer-item">
+                        <img src="{{thisBacker.user.picture_link}}" alt="" class="backer-image">
+                        <div class="backer-basic-info">
+                            <p class="backer-name">{{thisBacker.user.nickname}}</p>
+                            <p class="backer-location">₹{{thisBacker.amount}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-payment-button">
+            <button class="pay-button" ng-click="postSession()">PROCEED TO PAY</button>
+            <div>
+                <label>
+                    <input type="checkbox" ng-model="payAnonymously">
+                    &nbsp;Pay anonymously
+                </label>
+                <img class="pay-anonymously-tooltip" data-toggle="tooltip" data-placement="top" title="Check this box if you don’t want your name to be visible in the project backers list"
+                    src="../src/images/illustrations/tooltip-icon.svg">
+            </div>
+        </div>
+    </div>    
+</div>
+<login-modal ng-if="showLoginModal" hide-login-modal="hideLoginModal()"></login-modal>

@@ -1,0 +1,24 @@
+<div class="nav-wrap" ng-show="!hideMainNav">
+    <nav class="navbar navbar-default main-nav website-max-width nav-padding-top">
+        <div class="container-fluid">
+            <div class="navbar-default-header">
+              <a class="navbar-brand" href="/"><img class="earth47-logo" src="../src/images/illustrations/earth47-logo.svg" ></a>
+            </div>
+            <ul class="nav navbar-nav main-navbar-nav">
+                <li active-link="active-link" nav-state="home"><a href="/">Home</a></li>
+                <li active-link="active-link" nav-state="about"><a href="/about">About us</a></li>
+                <li active-link="active-link"   ><a href ng-click="goToBlog();">Blog</a></li>
+                <li active-link="active-link" nav-state="projects"><a href="/projects">Projects</a></li>
+                <li ng-show="showUserIcon">
+                    <img class="logout-dropdown-icon" ng-show="!profilePicLink" style="width: 30px; cursor: pointer;"
+                        src="../src/images/illustrations/user.svg">
+                    <img class="logout-dropdown-icon" ng-show="profilePicLink"
+                       style="width: 30px; cursor: pointer;" ng-src="{{profilePicLink}}">
+                    <div class="logout-dropdown">
+                        Logout
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

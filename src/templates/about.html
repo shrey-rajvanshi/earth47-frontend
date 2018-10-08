@@ -1,0 +1,63 @@
+<div class="about-us-block">
+    <div class="top-block">
+        <div class="top-block-wrap">
+          <div class="about-header-block">
+              <p class="font-size-28">Fighting climate change, a ton of CO<sub>2</sub> at a time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default aboutus-nav-desktop" about-nav>
+        <div class="container-fluid about-nav-block">
+            <ul class="nav navbar-nav about-nav-list">
+              <li  active-link="active-link-about" ng-click="setScrollPosition()" nav-state="story"><a href="/about/story">Our Story</a></li>
+              <li active-link="active-link-about" ng-click="setScrollPosition()" nav-state="howwefight"><a href="/about/howwefight">How this works</a></li>
+              <li active-link="active-link-about" ng-click="setScrollPosition()" nav-state="partners"><a href="/about/partners">Who we are</a></li>
+              <li active-link="active-link-about" ng-click="setScrollPosition()" nav-state="faqs"><a href="/about/faqs">FAQs</a></li>
+              <li active-link="active-link-about" ng-click="setScrollPosition()" nav-state="contact"><a href="/about/contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default aboutus-nav-mobile" ng-style="{'width': window.innerWidth + 'px'}">
+        <div class="container-fluid padding-0">
+            <ul class="nav navbar-nav about-nav-mobile-list" about-mobile-nav>
+              <div class="scroll-icon-prev">
+                <img style="margin-left: 15px;" src="../src/images/illustrations/project-prev.svg">
+                 <div style="height: 52px; width: 10px;"></div>
+              </div>
+              <li ng-click="setScrollPosition()" class="nav-item-story" style="padding-left: 15px;">
+                <a ng-style="{'width': window.innerWidth/3 + 'px'}" href="/about/story">
+                  <span active-link="active-link-about" nav-state="story">Our Story</span>
+                </a>
+              </li>
+              <li ng-click="setScrollPosition()" class="nav-item-howwefight">
+                <a ng-style="{'width': window.innerWidth/3 + 'px'}" href="/about/howwefight">
+                  <span active-link="active-link-about" nav-state="howwefight">How this works</span>
+                </a>
+              </li>
+              <li ng-click="setScrollPosition()" class="nav-item-partners">
+                <a ng-style="{'width': window.innerWidth/3 + 'px'}" href="/about/partners">
+                  <span active-link="active-link-about" nav-state="partners">Who we are</span>
+                </a>
+              </li>
+              <li ng-click="setScrollPosition()" class="nav-item-faqs">
+                <a ng-style="{'width': window.innerWidth/3 + 'px'}" href="/about/faqs">
+                  <span active-link="active-link-about" nav-state="faqs">FAQs</span>
+                </a>
+              </li>
+              <li ng-click="setScrollPosition()" class="nav-item-contact" style="padding-right: 15px;">
+                <a ng-style="{'width': window.innerWidth/3 + 'px'}" href="/about/contact">
+                  <span active-link="active-link-about" nav-state="contact">Contact Us</span>
+                </a>
+              </li>
+              <div class="scroll-icon-next">
+                <div style="height: 52px; width: 10px;"></div>
+                <img src="../src/images/illustrations/project-next.svg" style="margin-right: 15px;">
+              </div>
+            </ul>
+        </div>
+    </nav>
+    <div class="about-common-parent">
+      <div ui-view></div>
+    </div>
+</div>

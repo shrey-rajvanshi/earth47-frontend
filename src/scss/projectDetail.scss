@@ -1,0 +1,573 @@
+.project-detail-parent-block {
+    margin: 0 5%;
+    padding-top: 7em;
+    max-width: 1350px;
+
+    .desktop-margin-10 {
+        margin-right: 10px;
+    }
+
+    .project-images-slider {
+        position: relative;
+
+        .previous-icon {
+            position: absolute;
+            left: 30px;
+            top: 48.5%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .next-icon {
+            position: absolute;
+            right: 30px;
+            top: 48.5%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .project-image {
+            width: 100%;
+            height: 32em;
+        }
+    }
+
+    .project-detail-main-block {
+        padding-right: 5em;
+        padding-left: 2em;
+
+        .project-name {
+            font-size: 30px;
+            font-weight: 900;
+            color: #323334;
+            margin: .8em 0 0;
+        }
+
+        .project-location {
+            font-size: 18px;
+            color: #323334;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .project-detail-nav {
+            border-bottom: 1px solid #e8e8e9;
+            padding-bottom: .7em;
+            font-size: 14px;
+            font-weight: 600;
+            background: #fff;
+            color: #787887;
+            height: 60px;
+            padding-top: 2em;
+            display: flex;
+            justify-content: space-between;
+
+            .nav-item {
+                margin-right: 1%;
+                padding: 0 .5em 2em;
+                cursor: pointer;
+            }
+        }
+
+        .project-overview {
+            padding: 2em 1.5em 2em 0;
+            font-size: 16px;
+            line-height: 1.51;
+            text-align: left;
+            color: #414146;
+        }
+
+        .detail-header {
+            font-size: 30px;
+            font-weight: 900;
+            color: #414146;
+        }
+
+        .project-challenges {
+            margin-top: 5.4em;
+        }
+
+        .project-verification {
+            margin-top: 5.4em;
+            margin-bottom: 40px;
+
+            .project-standards-logo {
+                width: 90px;
+                margin-right: 50px;
+            }
+
+            .due-diligence-header {
+                font-size: 14px;
+                font-weight: 900;
+                text-align: left;
+                color: #787887;
+                margin-top: 2em;
+            }
+
+            .due-diligence-documents {
+                margin-top: 20px;
+            }
+
+            .document-item {
+                margin-bottom: 15px;
+            }
+
+            .verification-document {
+                font-size: 16px;
+                color: #414146;
+                text-decoration: none;
+                margin-left: 14px;
+            }
+        }
+
+        .primary-goal {
+            width: 20%;
+            margin-right: 1em;
+
+            .goal-text {
+                font-size: 18px;
+                text-align: left;
+                color: #414146;
+                margin-top: .8em;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    .project-progress-block {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .project-progress-card {
+        width: 443px;
+        border-radius: 6px;
+        margin-top: -60px;
+        z-index: 1;
+
+        .project-progress-header {
+            opacity: 0.6;
+            border-radius: 6px;
+            background-color: #000000;
+            color: #fff;
+            padding: 20px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .progress-card-block {
+            box-shadow: 0 1px 19px 0 rgba(0, 0, 0, 0.05);
+            border: solid 1px #f4f4f4;
+
+            .social-media-block {
+                border-top: solid 1px #efefef;
+                padding: 30px;
+                background: #fff;
+                
+                .people-viewed {
+                    font-size: 16px;
+                    text-align: left;
+                    color: #787887;
+                }
+
+                .social-media-links {
+                    height: 2.2em;
+                    margin-top: 2em;
+
+                    .social-media-icon {
+                        width: 2.2em;
+                        margin-right: 1em;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .progress-detail-block {
+            background-color: #ffffff;
+            padding: 30px;
+
+            .project-progress-bar {
+                width: 100%;
+                height: 6px;
+                background-color: #f0eeee;
+                overflow: visible;
+                border-radius: 2px;
+
+                .progress-completed {
+                    background: #35cf00; 
+                    height: 6px;
+                }
+            }
+
+            .goal-acheived {
+                font-size: 12px;
+                text-align: right;
+                color: #787887;
+                margin-top: .5em;
+            }
+
+            .detail-item {
+                margin-top: 20px;
+
+                .detail-value {
+                    font-size: 22px;
+                    font-weight: 900;
+                    color: #323334;
+                }
+
+                .detail-label {
+                    font-size: 16px;
+                    color: #939797;
+                }
+            }
+
+            .back-project-button {
+                width: 100%;
+                height: 60px;
+                border-radius: 6px;
+                background-image: linear-gradient(80deg, #f2515d, #f6a42b);
+                border: none;
+                margin-top: 20px;
+                font-size: 16px;
+                font-weight: 900;
+                letter-spacing: 1.5px;
+                color: #ffffff;
+                outline: none;
+            }
+        }
+    }
+}
+
+.sticky-card {
+    position: fixed;
+    top: 120px;
+
+    .project-progress-header {
+        opacity: .8 !important;
+    }
+}
+.sticky-project-nav {
+    position: fixed;
+    top: 60px;
+    z-index: 1;
+}
+.sticky-project-nav-mobile {
+    position: fixed;
+    top: 60px;
+    z-index: 1;
+}
+.mweb-project-progress {
+    display: none;
+}
+
+@media only screen and (min-width: 1780px) {
+    .project-detail-parent-block {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .project-detail-parent-block {
+
+        .project-progress-card {
+            width: 390px;
+        }
+        .project-detail-nav {
+            font-size: 13px;
+        }
+    }
+}
+    
+@media only screen and (max-width: 1064px) {
+    .project-detail-parent-block {
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: 0;
+
+        .project-detail-main-block {
+            padding-right: 1em;
+            padding-left: 2em;
+
+            .project-name {
+                font-size: 24px;
+            }
+
+            .project-detail-nav {
+                font-size: 12px;
+
+                .nav-item {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .project-progress-card {
+            width: 350px;
+        }
+    }
+}
+
+.mobile-payment-button {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .project-detail-parent-block {
+        margin: 0;
+        padding: 0;
+        padding-top: 60px;
+
+        .desktop-margin-10 {
+            margin-right: 0;
+        }
+
+        .project-images-slider {
+
+            .previous-icon {
+                top: 53.5%;
+            }
+
+            .next-icon {
+                top: 53.5%;
+            }
+
+            .project-image {
+                height: 185px;
+            }
+        }
+
+        .row.mobile-margin-0 {
+            margin: 0;
+        }
+
+        .project-detail-main-block {
+            padding: 0;
+            margin-left: 0;
+
+            .detail-top-block {
+                padding: 0 2em;
+                padding-bottom: 2em;
+            }
+
+            .detail-header {
+                font-size: 18px;
+            }
+
+            .project-name {
+                font-size: 22px;
+            }
+
+            .project-location {
+                font-size: 16px;
+            }
+
+            .primary-goal {
+
+                .goal-text {
+                    font-size: 13px;
+                }
+            }
+
+            .project-overview {
+                padding-right: 0;
+                padding-bottom: 15px;
+                padding-top: 15px;
+            }
+
+            .project-impact {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            .project-challenges {
+                margin-top: 15px;
+                padding-bottom: 15px;
+            }
+
+            .project-verification {
+                margin-top: 15px;
+            }
+
+            .details-padding {
+                padding: 0 1em;
+            }
+
+            .project-detail-nav {
+                height: 40px;
+                padding-top: 1em;
+                padding-left: 1em;
+                padding-right: 1em;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+                border: 1px solid #e8e8e9;
+            }
+        }
+
+        .project-progress-card {
+            display: none;
+        }
+
+        .mweb-project-progress {
+            display: block;
+
+            .detail-item {
+                display: flex;
+                margin-top: .5em;
+                align-items: baseline;
+
+                .detail-value {
+                    font-size: 18px;
+                    font-weight: 900;
+                    color: #414146;
+                }
+
+                .detail-label {
+                    font-size: 13px;
+                    color: #787887;
+                }
+            }
+
+            .goal-acheived {
+                font-size: 12px;
+                text-align: right;
+                color: #787887;
+                margin-top: .5em;
+            }
+
+            .margin-break {
+                margin-top: 1.5em;
+            }    
+
+            .project-progress-bar {
+                width: 100%;
+                height: 5px;
+                background-color: #f0eeee;
+                overflow: visible;
+                border-radius: 2px;
+
+                .progress-completed {
+                    background: #35cf00; 
+                    height: 5px;
+                }
+            }
+        }
+
+        .mobile-payment-button {
+            display: block;
+            z-index: 2;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1em;
+            background: #fff;
+            text-align: center;
+            box-shadow: 0 -1px 2px 1px rgba(180, 180, 190, 0.25);
+
+            .back-project-button {
+                border-radius: 4px;
+                background-image: linear-gradient(82deg, #f1515d, #f5a42b);
+                font-size: 14px;
+                font-weight: bold;
+                color: #ffffff;
+                border: none;
+                outline: none;
+                height: 3em;
+                width: 85%;
+            }
+        }
+    }
+
+    .explore-other-projects {
+        padding: 20px !important;
+        margin-bottom: 70px !important;
+    }
+}
+
+.explore-other-projects {
+    background-color: #f9f7f6;
+    padding: 30px 10% 68px 10%;
+
+    .slick-slide {
+        margin: 0 10px;
+        outline: none;
+    }
+
+    .slick-list {
+        margin: 0 -10px;
+    }
+
+    .slick-next.slick-arrow {
+        background: url(../../src/images/illustrations/project-next.svg);
+        background-repeat: no-repeat;
+        width:30px;
+        height:30px;
+        margin-right: -59px;
+    }
+    .slick-prev:before, .slick-next:before {
+        opacity: 0;
+        color: transparent;
+    }
+
+    .slick-prev.slick-arrow {
+        background: url(../../src/images/illustrations/project-prev.svg);
+        background-repeat: no-repeat;
+        width:12px;
+        height:30px;
+        margin-left: -41px;
+    }
+
+    .explore-projects-header {
+        font-size: 24px;
+        font-weight: 900;
+        text-align: left;
+        color: #414146;
+    }
+
+    .other-projects-block {
+        max-width: 1180px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .project-card-block {
+            box-shadow: 0 1px 19px 0 rgba(0, 0, 0, 0.05);
+            border: solid 1px #efefef;
+            padding: 9px;
+            background: #fff;
+            cursor: pointer;
+
+            .project-details {
+                padding: 18px;
+
+                .project-name  {
+                    font-size: 18px;
+                    font-weight: 900;
+                    color: #414146;
+                    margin-bottom: 0;
+                    line-height: 1.33;
+                    height: 46px;
+                }
+
+                .project-location {
+                    font-size: 12px;
+                    color: #b7bbbc;
+                }
+            }
+            img {
+                width: 100%;
+                height: 240px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1246px) {
+    .other-projects-block {
+        max-width: 786px !important;
+    }
+}

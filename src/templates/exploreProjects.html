@@ -1,0 +1,15 @@
+<div class="other-projects-block">
+    <slick settings="slickConfig" ng-if="projectsArray.length">
+        <div class="slide-content" ng-repeat="thisProject in projectsArray">
+            <div class="project-card-block" ng-click="goToProjectDetail(thisProject.id, thisProject.title)">
+                <img ng-src="{{thisProject.photos[0].image}}">
+                <div class="project-details">
+                    <p class="project-name">{{thisProject.title}}</p>
+                    <p class="display-flex-center project-location"><span class="location-icon"></span>{{thisProject.city}}, {{thisProject.country}}</p>
+                    <p class="display-flex-center"><span class="co2-reduced-icon"></span>
+                        {{thisProject.co2_impact}} Tonnes CO<sub>2</sub>&nbsp;Reduced</p>
+                </div>
+            </div>
+        </div>
+    </slick>
+</div>

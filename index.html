@@ -1,0 +1,137 @@
+<!doctype html>
+	<head>
+        <link rel="shortcut icon" type="image/png" href="src/images/illustrations/favicon.png"/>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Fight Climate Change | Earth47</title>
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width"/>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <base href="/index.html" />
+		<!-- CSS -->
+		<!-- build:css css/style.min.css -->
+		<link rel="stylesheet" type="text/css" href="/vendors/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="/src/css/nav.css" />
+        <link rel="stylesheet" type="text/css" href="/_build/css/footer.css" />
+        <link rel="stylesheet" type="text/css" href="/_build/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="/_build/css/home.css" />
+        <link rel="stylesheet" type="text/css" href="/_build/css/about.css" />
+        <link rel="stylesheet" type="text/css" href="/_build/css/projectListings.css" />
+        <link rel="stylesheet" type="text/css" href="/_build/css/thankyou.css" />
+        <link rel="stylesheet" type="text/css" href="/_build/css/projectDetail.css" />
+        <link rel="stylesheet" type="text/css" href="/_build/css/projectsCorousel.css" />
+        <link rel="stylesheet" type="text/css" href="/_build/css/projectPayment.css" />
+        <link rel="stylesheet" type="text/css" href="/_build/css/blogsCorousel.css" />
+        <link rel="stylesheet" type="text/css" href="/_build/css/loginModal.css" />
+        <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css">
+        <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css">
+        <link rel="stylesheet" type="text/css" href="/vendors/animate.min.css" />
+		<!-- endbuild -->
+        <!--- Social Media Sharing -->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Build the world you wish to live in" />
+        <meta name="twitter:description" content="Offset your carbon footprint by supporting greenhouse gas reducing projects on Earth 47. Every contributions fights climate and helps build a better tomorrow." />
+        <meta name="twitter:image" content="https://www.earth47.com/src/images/illustrations/social-media-sharing.png" />
+	</head>
+	<body >
+		<div ng-app="earth47App" class="earth47-font-family margin-0-auto">
+           <!--  <script>
+              window.fbAsyncInit = function() {
+                FB.init({appId: '605537653117643', status: true, cookie: true,
+                xfbml: true});
+              };
+
+              (function() {
+                var e = document.createElement('script'); e.async = true;
+                e.src = document.location.protocol +
+                '//connect.facebook.net/en_US/all.js';
+                document.getElementById('fb-root').appendChild(e);
+              }());
+
+              window.___gcfg = {
+                lang: 'zh-CN',
+                parsetags: 'onload'
+              };
+              window.twttr = (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                    t = window.twttr || {};
+                if (d.getElementById(id)) return t;
+                  js = d.createElement(s);
+                  js.id = id;
+                  js.src = "https://platform.twitter.com/widgets.js";
+                  fjs.parentNode.insertBefore(js, fjs);
+                
+                  t._e = [];
+                  t.ready = function(f) {
+                    t._e.push(f);
+                  };
+                  return t;
+                }(document, "script", "twitter-wjs"));
+            </script> -->
+            <div id="fb-root"></div>
+            <desktopnav></desktopnav>
+            <div class="mobile-top-nav">
+                <img id="hamburger-icon" src="../src/images/illustrations/hamburger.svg">
+                <p class="mnav-title"><img src="../src/images/illustrations/earth47-logo.svg"> </p>
+            </div>
+            <mobile-side-nav></mobile-side-nav>
+            <fullpage-loader></fullpage-loader>
+			<div ui-view autoscroll></div>
+            <div class="container-fluid bottom-container">
+                <footer></footer>
+            </div>
+		</div>
+	</body>
+
+    <!-- build:nonangularlibs js/nonangularlibs.js -->
+    <script type="text/javascript" src="vendors/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="vendors/bootstrap.min.js"></script>
+    <!-- endbuild -->
+
+	<!-- build:libs js/libs.js -->
+	<script type="text/javascript" src="vendors/lodash.min.js"></script>
+	<!-- endbuild -->
+
+	<!-- Angular external libraries for application -->
+	<!-- build:angularlibs js/angularlibs.js -->
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
+	<!-- endbuild -->
+
+	<!-- Application sections -->
+	<!-- build:mainapp js/mainapp.js -->
+	<script type="text/javascript" src="src/app.js"></script>
+    <script type="text/javascript" src="src/js/directives/activeLink.js"></script>
+    <script type="text/javascript" src="src/js/directives/desktopNavDirective.js"></script>
+    <script type="text/javascript" src="src/js/directives/mobileSideNavDirective.js"></script>
+    <script type="text/javascript" src="src/js/controllers/homeController.js"></script>
+    <script type="text/javascript" src="src/js/controllers/aboutController.js"></script>
+    <script type="text/javascript" src="src/js/directives/footerDirective.js"></script>
+    <script type="text/javascript" src="src/js/directives/exploreProjectsDirective.js"></script>
+    <script type="text/javascript" src="src/js/directives/aboutMobileNav.js"></script>
+    <script type="text/javascript" src="src/js/directives/projectsWeSupportDirective.js"></script>
+    <script type="text/javascript" src="src/js/directives/stickyProjectDetailsCard.js"></script>
+    <script type="text/javascript" src="src/js/directives/stickyDetailsNav.js"></script>
+    <script type="text/javascript" src="src/js/directives/loginModal.js"></script>
+    <script type="text/javascript" src="src/js/directives/loaderDirective.js"></script>
+    <script type="text/javascript" src="src/js/directives/blogsCorousel.js"></script>
+    <script type="text/javascript" src="src/js/directives/aboutNavDirective.js"></script>
+    <script type="text/javascript" src="src/js/directives/testimonialsDirective.js"></script>
+    <script type="text/javascript" src="src/js/directives/imageLoader.js"></script>
+    <script type="text/javascript" src="src/js/models/projectsModel.js"></script>
+    <script type="text/javascript" src="src/js/controllers/projectsListingController.js"></script>
+    <script type="text/javascript" src="src/js/controllers/projectDetailController.js"></script>
+    <script type="text/javascript" src="src/js/controllers/projectPaymentController.js"></script>
+    <script type="text/javascript" src="src/js/controllers/thankyouController.js"></script>
+	<!-- endbuild -->
+
+	<!-- templates from $templateCache -->
+	<!-- build:templates -->
+	<!-- endbuild -->
+</html>

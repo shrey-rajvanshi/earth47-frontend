@@ -1,0 +1,45 @@
+<div class="project-listing-container website-max-width">
+  <div class="project-listing-header">
+    <p class="select-project-text">Select a project to support</p>
+    <p class="select-project-message">Your contribution helps reduce greenhouse gases</p>
+  </div>
+  <div class="project-listing-block">
+    <div class="projects-listing container-fluid">
+      <div class="cards-wrapper">
+        <div class="row listing-center">
+          <div ng-repeat="thisProject in projectsArray" class="col-md-6 col-sm-6 col-xs-12 project-card-block">
+            <div class="project-card" ng-click="showCardDetails(thisProject.id);">
+              <img ng-src="{{thisProject.photos[0].image}}" class="project-image">
+              <div class="project-detail-block">
+                <div class="project-primary-item">
+                  <p class="project-name">{{thisProject.title}}</p>
+                  <p class="project-location display-flex-center"><span class="location-icon"></span>{{thisProject.city}}, {{thisProject.country}}</p>
+                </div>
+                <p class="project-description">{{thisProject.name}}</p>
+                <div class="project-progress-bar">
+                  <div class="progress-completed" ng-style="{width: thisProject.goal_acheived}"></div>
+                </div>
+                <div class="goal-acheived">{{thisProject.goal_acheived}} goal acheived</div>
+                <p class="normal-text co2-reduced"><span class="bold-text">
+                  {{thisProject.co2_impact}} Tonnes </span> of CO<sub>2</sub> reduced</p>
+                <p class="normal-text"><span class="bold-text">₹{{thisProject.achieved_funding}} </span> Raised</p>
+                <p class="normal-text">
+                  <span ng-if="thisProject.backers && thisProject.backers.length">
+                    <span class="bold-text">{{thisProject.backers.length}} </span>
+                    Backers
+                  </span>
+                  <span ng-if="!thisProject.backers.length">Be the first to back this project</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project-listing-footer">
+    <p class="footer-text">One Payment for All</p>
+    <p class="footer-message">Make one payment to contribute to all projects.</p>
+    <button class="btn btn-primary contribute-to-all" ng-click="contributeToAll()">CONTRIBUTE</button>
+  </div>
+</div>

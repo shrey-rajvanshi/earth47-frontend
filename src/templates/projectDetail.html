@@ -1,0 +1,161 @@
+<div class="container-fluid project-detail-parent-block">
+  <div class="project-images-slider">
+    <img class="previous-icon" src="../../src/images/illustrations/previous.svg"
+      ng-click="toggleImage()" ng-show="projectObject.activeImageIndex!==0">
+    <img class="next-icon" src="../../src/images/illustrations/next.svg"
+      ng-click="toggleImage(true)" ng-show="projectObject.activeImageIndex!==projectObject.photos.length-1">
+    <div ng-repeat="photo in projectObject.photos" ng-show="projectObject.activeImageIndex === $index">
+      <img src="{{photo.image}}" class="project-image">
+    </div>
+  </div>
+  <div class="row mobile-margin-0 desktop-margin-10">
+    <div class="col-md-7 col-sm-6 col-xs-12 project-detail-main-block">
+      <div class="detail-top-block">
+        <p class="project-name">{{projectObject.title}}</p>
+        <p class="project-location"><span class="location-icon"></span>{{projectObject.city}}, {{projectObject.country}}</p>
+        <div class="mweb-project-progress">
+          <div class="progress-card-block">
+            <div class="progress-detail-block">
+              <div class="project-progress-bar">
+                <div class="progress-completed" ng-style="{width: projectObject.goal_acheived}"></div>
+              </div>
+              <div class="goal-acheived">{{projectObject.goal_acheived}} goal acheived</div>
+              <div class="detail-item margin-break">
+                <div class="detail-value">{{projectObject.co2_impact}} Tonnes</div>
+                <div class="detail-label">&nbsp;of CO<sub>2</sub> reduced</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-value">₹{{projectObject.achieved_funding}}</div>
+                <div class="detail-label">&nbsp;Raised</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-value">₹{{projectObject.price_per_tonne}}</div>
+                <div class="detail-label">&nbsp;Price per tonne</div>
+              </div>
+              <div class="detail-item" ng-show="projectObject.backers && projectObject.backers.length">
+                <div class="detail-value">{{projectObject.backers.length}}</div>
+                <div class="detail-label">&nbsp;Backers</div>
+              </div>
+              <div class="detail-item" ng-show="!projectObject.backers.length">
+                <div class="detail-label">
+                  Be the first to back this project
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div sticky-nav>
+        <div class="project-detail-nav">
+          <span class="nav-item nav-item-overview active-link-overview" ng-click="scrollTo('overview')">OVERVIEW</span>
+          <span class="nav-item nav-item-impact" ng-click="scrollTo('impact')">IMPACT</span>
+          <span class="nav-item nav-item-challenges" ng-show="projectObject.challenges.length" ng-click="scrollTo('challenges')">CHALLENGES</span>
+          <span class="nav-item nav-item-verification" ng-click="scrollTo('verification')">VERIFICATION</span>
+        </div>
+      </div>
+      <div class="details-padding">
+        <div class="project-overview">
+          {{projectObject.overview}}
+        </div>
+        <div class="project-impact">
+          <p class="detail-header">Impact</p>
+          <p class="font-text-2">Sustainable development goals acheived:</p>
+          <div class="display-flex margin-bottom-2">
+            <div class="primary-goal" ng-repeat="thisGoal in projectObject.goals">
+              <img class="rectangular-1" src="{{thisGoal.image}}">
+              <p class="goal-text">{{thisGoal.title}}</p>
+            </div>
+          </div>
+          <div class="secondary-goals">
+            <div class="margin-bottom-1 font-text-1" ng-repeat="thisImpact in projectObject.impacts">
+              <div class="bullet-item"></div>{{thisImpact}}
+            </div>
+          </div>
+        </div>
+        <div class="project-challenges" ng-show="projectObject.challenges.length">
+          <p class="detail-header">Challenges</p>
+          <div class="margin-bottom-1 font-text-1" ng-repeat="thisChallenge in projectObject.challenges">
+            <div class="bullet-item"></div>{{thisChallenge}}
+          </div>
+        </div>
+        <div class="project-verification">
+          <p class="detail-header">Verification</p>
+          <div class="display-flex-center">
+            <div ng-repeat="thisStandard in projectObject.standards">
+              <img src="{{thisStandard.image}}" class="project-standards-logo"/>
+            </div>
+          </div>
+          <p class="due-diligence-header">Due diligence  documents:</p>
+          <div class="due-diligence-documents">
+            <div ng-repeat="thisDocument in projectObject.verifications" class="display-flex document-item">
+              <a href="{{thisDocument.path}}"><img src="../../src/images/illustrations/download-icon.svg"
+                  style="width: 20px;"></a>
+              <a class="verification-document" href="{{thisDocument.path}}">{{thisDocument.name}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-6 project-progress-block">
+      <div class="project-progress-card" sticky-card>
+        <div class="project-progress-header">
+          PROJECT PROGRESS
+        </div>
+        <div class="progress-card-block">
+          <div class="progress-detail-block">
+            <div class="project-progress-bar">
+              <div class="progress-completed" ng-style="{width: projectObject.goal_acheived}"></div>
+            </div>
+            <div class="goal-acheived">{{projectObject.goal_acheived}} goal acheived</div>
+            <div class="detail-item">
+              <div class="detail-value">{{projectObject.co2_impact}} Tonnes</div>
+              <div class="detail-label">of CO<sub>2</sub> reduced</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-value">₹{{projectObject.achieved_funding}}</div>
+              <div class="detail-label">Raised</div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-value">₹{{projectObject.price_per_tonne}}</div>
+              <div class="detail-label">Price per tonne</div>
+            </div>
+            <div class="detail-item">
+              <div ng-show="projectObject.backers && projectObject.backers.length">
+                <div class="detail-value">{{projectObject.backers.length}}</div>
+                <div class="detail-label">Backers</div>
+              </div>
+              <div class="detail-label" ng-show="!projectObject.backers.length">
+                Be the first to back this project
+              </div>
+            </div>
+            <button class="btn btn-primary back-project-button" ng-click="backThisProject()">BACK THIS PROJECT</button>
+          </div>
+          <div class="social-media-block">
+            <p class="people-viewed">3000 people viewed and shared this peoject.</p>
+            <div class="display-flex social-media-links">
+              <img class="social-media-icon" id = "share_button"
+                src="../../src/images/illustrations/facebook-icon.svg"
+                ng-click="shareOnFb($event)">
+              <a class="twitter-share-button" href="https://twitter.com/intent/tweet"
+                target="_blank">
+                <img class="social-media-icon" src="../../src/images/illustrations/twitter-icon.svg" />
+              </a>
+              <g:plus action="share" ...></g:plus>
+              <!-- <a href="https://plus.google.com/share?url={{currentPageUrl}}"
+                onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                <img class="social-media-icon" src="../../src/images/illustrations/gmail-icon.svg" alt="Share on Google+"/>             
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-payment-button">
+    <button class="back-project-button" ng-click="backThisProject()">BACK THIS PROJECT</button>
+  </div>
+</div>
+<div class="explore-other-projects website-max-width">
+  <p class="explore-projects-header">Explore Other Projects</p>
+  <explore-projects></explore-projects>
+</div>

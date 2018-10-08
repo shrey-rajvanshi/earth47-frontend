@@ -1,0 +1,52 @@
+<div ng-show="!hideFooter">
+    <div class="newsletters-block" ng-show="!hideNewsletter">
+        <div class="row" ng-show="!showSuccessMessage">
+            <div class="col-md-6 col-sm-6 col-xs-12 message-block">
+                <p class="newsletter-label">Subscribe to our news letter</p>
+                <p class="newsletter-description">Stay updated in the fight against climate change</p>
+            </div>
+            <div class="user-email-block col-md-6 col-sm-6 col-xs-12">
+                <form class="newsletter-form" name="newsLetterForm" novalidate>
+                    <input class="user-email" type="email" name="userEmail" placeholder="Enter your email" ng-model="userEmail" required>
+                    <button class="btn btn-primary email-submit-button" ng-click="subscribe()">SUBMIT</button>
+                    <div class="error-state" ng-show="newsLetterForm.userEmail.$touched && (newsLetterForm.userEmail.$error.email || newsLetterForm.userEmail.$error.required)">Email is not valid.</div>
+                </form>
+            </div>
+        </div>
+        <p class="success-state" ng-show="showSuccessMessage">Welcome Aboard! You have signed up successfully.</p>
+    </div>
+    <div class="row main-footer">
+        <div class="col-md-6 col-sm-6 col-xs-12 footer-main-block">
+            <div class="footer-logo">
+                <img class="earth47-logo" src="../src/images/illustrations/earth47-logo.svg">
+            </div>
+            <div class="footer-nav-items display-flex">
+                <div class="main-items">
+                    <div class="footer-item"><a href="/">Home</a></div>
+                    <div class="footer-item"><a href="/about">About Us</a></div>
+                    <div class="footer-item"><a href ng-click="goToBlog();">Blog</a></div>
+                    <div class="footer-item"><a href="/projects">Projects</a></div>
+                </div>
+                <div class="secondry-items">
+                    <div class="footer-item"><a href="/privacypolicy" target="_blank">Privacy Policy</a></div>
+                    <div class="footer-item"><a href="/terms" target="_blank">Terms & Conditions</a></div>
+                    <div class="footer-item"><a href="/refundpolicy" target="_blank">Refund Policy</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 social-media-icons">
+            <div>
+                <div class="icons-container">
+                    <div class="icons-container-block">
+                        <p class="section-header">Help spread the word</p>
+                        <img src="../src/images/illustrations/fb.svg" class="first-icon">
+                        <img src="../src/images/illustrations/twitter.svg">
+                        <img src="../src/images/illustrations/reddit.svg">
+                        <img src="../src/images/illustrations/linkedin.svg">
+                    </div>
+                </div>
+                <div class="copy-right-text"><img src="../src/images/illustrations/copyright.svg"> &nbsp;VM Puri Environmental Solutions Pvt. Ltd.</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,290 @@
+.project-progress-bar {
+    width: 100%;
+    height: 3px;
+    background-color: #f0eeee;
+    overflow: visible;
+
+    .progress-completed {
+        background: #35cf00; 
+        height: 3px;
+    }
+}
+.cards-wrapper {
+    max-width: 1436px;
+    margin: 0 auto;
+}
+.project-listing-container {
+    .project-listing-header {
+        text-align: center;
+        background: #f8f4f1;
+        padding: 4em;
+
+        .select-project-text {
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 1.36;
+            color: #323334;
+            margin-bottom: 0 !important;
+            margin-top: 1em;
+        }
+
+        .select-project-message {
+            font-size: 18px;
+            line-height: 1.29;
+            color: #323334;
+        }
+    }
+
+    .listing-center {
+        justify-content: center;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .project-listing-block {
+
+        .project-filters {
+            width: 20%;
+
+            .filter-by {
+                padding: 1.5em 0 .3em 1.8em;
+                font-size: 12px;
+                color: #b4b4b4;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .filter-label {
+                padding: 1.2em 0 1.2em 1.8em;
+                font-size: 12px;
+                color: #787887;
+                border-bottom: 1px solid #e0e0e0;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .selected-filter {
+                font-weight: 900;
+                background-image: linear-gradient(253deg, #f3f3f3, #d8d8d8);
+            }
+        }
+
+        .projects-listing {
+            margin: 3.5em 5% 0;
+
+            .project-card-block {
+                margin-bottom: 4em;
+                max-width: 34.7em;
+
+                .project-card {
+                    padding: .7em;
+                    box-shadow: 0 1px 19px 0 rgba(0, 0, 0, 0.05);
+                    border: solid 1px #efefef;
+
+                    .project-image {
+                        width: 100%;
+                        height: 227px;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    .project-detail-block {
+                        padding: 1.2em 2.2em;
+
+                        .project-name {
+                            font-size: 22px;
+                            font-weight: 900;
+                            line-height: 1.33;
+                            text-align: left;
+                            color: #414146;
+                            margin-bottom: 0;
+                        }
+
+                        .project-primary-item {
+                            height: 70px;
+                            margin-bottom: 1.8em;
+                        }
+
+                        .project-location {
+                            font-size: 14px;
+                            text-align: left;
+                            color: #787887;
+                        }
+
+                        .project-description {
+                            font-size: 16px;
+                            line-height: 1.42;
+                            text-align: left;
+                            color: #787887;
+                            margin-bottom: 2.3em;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;  
+                        }
+
+                        .goal-acheived {
+                            font-size: 12px;
+                            text-align: right;
+                            color: #787887;
+                            margin-top: .5em;
+                        }
+
+                        .co2-reduced {
+                            margin-top: 2em;
+                        }
+
+                        .bold-text {
+                            font-size: 16px;
+                            font-weight: 900;
+                            color: #414146;
+                        }
+
+                        .normal-text {
+                            font-size: 16px;
+                            color: #787887;
+                            margin-bottom: .3em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .project-listing-footer {
+        background: #f8f4f1;
+        padding: 5% 0;
+        text-align: center;
+
+        .contribute-to-all {
+            width: 37.5%;
+            max-width: 16.2em;
+            height: 4em;
+            border-radius: 6px;
+            background-image: linear-gradient(80deg, #f2515d, #f6a42b);
+            font-size: 16px;
+            font-weight: 900;
+            letter-spacing: 2.7px;
+            color: #ffffff;
+            border: none;
+        }
+
+        .footer-text {
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 1.37;
+            color: #323334;
+            margin-bottom: 0;
+        }
+
+        .footer-message {
+            font-size: 18px;
+            line-height: 1.82;
+            color: #323334;
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .project-listing-container {
+        padding-top: 4.3em;
+        background: #f7f7f9;
+
+        .project-listing-header {
+            padding: 1.5em 0 1em;
+
+            .select-project-text {
+                font-size: 18px;
+                margin-top: 0;
+            }
+
+            .select-project-message {
+                font-size: 13px;
+            }
+        
+        }
+
+        .project-listing-block {
+
+            .projects-listing {
+                padding: 0;
+                margin-top: 0;
+
+                .project-card-block {
+                    margin-bottom: .8em;
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    .project-card {
+                        background: #fff;
+                        max-width: 344px;
+
+                        .project-image {
+                            height: 10.4em;
+                        }
+
+                        .project-detail-block {
+                            padding: .8em .4em;
+
+                            .project-name {
+                                font-size: 18px;
+                                line-height: 1.33;
+                                height: auto;
+                            }
+
+                            .project-primary-item {
+                                margin-bottom: 0;
+                                height: auto;
+                            }
+
+                            .project-location {
+                                font-size: 13px;
+                                margin-bottom: 1.8em;
+                            }
+
+                            .project-description {
+                                display: none;
+                            }
+
+                            .co2-reduced {
+                                margin-top: .7em;
+                            }
+
+                            .normal-text {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .project-listing-footer {
+
+            .contribute-to-all {
+                width: 60%;
+                height: 2.6em;
+                font-size: 14px;
+            }
+
+            .footer-text {
+                font-size: 18px;
+            }
+
+            .footer-message {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1620px) {
+    .project-listing-container {
+
+        .listing-center {
+            justify-content: flex-start;
+        }
+    }
+}

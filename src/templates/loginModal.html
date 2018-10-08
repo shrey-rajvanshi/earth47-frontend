@@ -1,0 +1,19 @@
+<div class="login-modal-overlay"></div>
+<div class="login-modal-block">
+    <img class="close-modal-desktop" src="../../src/images/illustrations/close-modal.svg" ng-click="callHideModal();">
+    <img class="close-modal-mobile" src="../../src/images/illustrations/ic-cross.svg" ng-click="callHideModal();">
+    <p class="login-header">Login to proceed</p>
+    <p class="sub-text">This information will help us send you the payment recipts.</p>
+    <button class="facebook-login-button" ng-click="loginWithFacebook();">Continue with Facebook</button>
+    <button class="google-login-button" ng-click="loginWithGoogle();">Continue with Google</button>
+    <div class="line-seperation"><span class="or-text">OR</span></div>
+    <div class="user-info-block">
+        <p class="sub-header">Provide name, email, phone number</p>
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email id">
+        <input type="number" name="mobile" placeholder="Mobile">
+        <div class="text-align-center">
+            <button class="continue-button">Continue</button>
+        </div>
+    </div>
+</div>

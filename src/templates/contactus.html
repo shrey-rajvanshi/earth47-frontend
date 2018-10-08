@@ -1,0 +1,67 @@
+<div class="contact-us-block">
+    <p class="contact-us-header">We’d love to hear from you.</p>
+    <div class="form-block">
+        <div ng-show="showForm">
+            <p class="form-block-header">DROP YOUR MESSAGE</p>
+            <form class="contact-us-form" name="contactUsForm" novalidate>
+                <div class="field-block">
+                    <input class="field-input" type="text" name="name" ng-model="name" placeholder="Name" required>
+                    <div class="error-state" ng-show="contactUsForm.name.$touched && contactUsForm.name.$invalid">Name is required.</div>
+                </div>
+                <div class="field-block">
+                    <input class="field-input" type="email" name="email" ng-model="email" placeholder="Email address" required>
+                    <div class="error-state" ng-show="contactUsForm.email.$touched && contactUsForm.email.$error.required">Email is required.</div>
+                    <div class="error-state" ng-show="contactUsForm.email.$touched && contactUsForm.email.$error.email">Email is not valid.</div>
+                </div>
+                <div class="field-block">
+                    <input class="field-input" type="number" name="phone" ng-model="phone" placeholder="Phone no.">
+                </div>
+                <div class="field-block">
+                    <textarea class="field-input message-textarea field-input-message" name="message" rows="2" cols="50" 
+                        ng-model="message"
+                        placeholder="Your message" required></textarea>
+                    <div class="error-state message-error-state" ng-show="contactUsForm.message.$touched && contactUsForm.message.$error.required">Message is required.</div>
+                </div>
+                <button class="btn btn-primary send-message-button" ng-click="submitForm()" ng-disabled="!contactUsForm.$valid">SEND MESSAGE</button>
+            </form>
+        </div>
+        <div ng-show="success" class="success-block">
+            <img class="success-tick" src="../src/images/illustrations/ic-tick.svg">
+            <p class="success-message">
+                Thanks for reaching out. We will respond to your message shortly.
+
+            </p>
+            <button class="btn btn-primary send-message-button button-width"
+                ng-click="successDone();"
+                >DONE</button>
+        </div>
+    </div>
+    <div class="contact-info-block">
+        <div class="info-item">
+            <p class="item-label">EMAIL</p>
+            <p class="item-value">info@earth47.com</p>
+        </div>
+        <div class="info-item">
+            <p class="item-label">MOBILE NUMBER</p>
+            <p class="item-value">+91-9741704982</p>
+        </div>
+        <div class="info-item">
+            <p class="item-label">OFFICE LOCATION</p>
+            <p class="item-value">
+                #175, JP Nagar, Bannerghatta Main Road, Bangalore, India-560076.
+            </p>
+        </div>
+        <div class="info-item">
+            <p class="item-label">FIND US ON</p>
+            <div class="social-media-links">
+                <a href="https://www.facebook.com/47earth" target="_blank">
+                    <img src="../src/images/illustrations/fb.svg">
+                </a>
+                <a href="https://twitter.com/E_arth47" target="_blank">
+                    <img src="../src/images/illustrations/twitter.svg">
+                </a>
+                <img src="../src/images/illustrations/linkedin.svg">
+            </div>
+        </div>
+    </div>
+</div>

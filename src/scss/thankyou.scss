@@ -1,0 +1,89 @@
+.thankyou-block {
+    display: flex;
+    margin-top: 180px;
+    margin-left: 7%;
+    margin-bottom: 120px;
+    color: #2d2d32;
+
+    .superhero {
+        font-size: 32px;
+        font-weight: 500;
+        color: #2d2d32;
+    }
+
+    .thankyou-message {
+        font-size: 20px;
+        color: #2d2d32;
+    }
+
+    .image-block {
+        margin-left: 15%;
+    }
+
+    .social-media-block {
+        margin-top: 65px;
+
+        .join-fight {
+            font-size: 20px;
+        }
+
+        .social-media-links {
+            .social-media-icon {
+                width: 52px;
+                margin-right: 10px;
+            }
+            .g-plus-icon {
+                width: 48px;
+            }
+        }
+    }
+
+    .unsubcribe-link {
+        color: #2d2d32;
+        text-decoration: underline;
+    }
+
+    .amount-paid {
+        color: #f87536;
+    }
+
+    .newsletter-reminder {
+        margin-top: 65px;
+    }
+
+    .social-links-mweb {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .thankyou-block {
+        display: block;
+        margin-top: 110px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 80px;
+
+        .superhero {
+            font-size: 24px;
+        }
+
+        .thankyou-message {
+            font-size: 18px;
+        }
+
+        .image-block {
+            margin-top: 40px;
+            margin-left: 0;
+            text-align: center;
+        }
+
+        .social-links-mweb {
+            display: block;
+        }
+
+        .social-links-desktop {
+            display: none;
+        }
+    }
+}

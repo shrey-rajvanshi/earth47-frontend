@@ -1,0 +1,23 @@
+<div class="side-mnav">
+    <div class="mnav-title" ng-click="hideNav()" ><a href="/"><img class="earth47-logo" src="../src/images/illustrations/earth47-logo.svg"></a></div>
+    <ul class="side-mnav-items">
+        <li active-link="active-link" nav-state="home" class="side-mnav-item"><a ng-click="hideNav()" href="/">Home</a></li>
+        <li active-link="active-link" ng-click="toggleAboutusOptions()" nav-state="about" class="side-mnav-item">
+        	<a>About us</a>
+        	<img src="../src/images/illustrations/about-nav-toggle.svg" ng-show="!showAboutusOptions" style="width: 10px; margin-left: 10px;">
+        	<img src="../src/images/illustrations/down-arrow.svg" ng-show="showAboutusOptions" style="width: 10px; margin-left: 10px;">
+        </li>
+        <ul ng-show="showAboutusOptions" style="list-style: none; padding-left: 19%;">
+        	<li active-link="active-link" nav-state="story" style="padding: 10px 0;"><a style="font-size: 14px; color: #414146; padding-left: 20px;" ng-click="hideNav()" href="/about/story">Our Story</a></li>
+        	<li active-link="active-link" nav-state="howwefight" style="padding: 10px 0;"><a style="font-size: 14px; color: #414146; padding-left: 20px;" ng-click="hideNav()" href="/about/howwefight">How it works</a></li>
+        	<li active-link="active-link" nav-state="partners" style="padding: 10px 0;"><a style="font-size: 14px; color: #414146; padding-left: 20px;" ng-click="hideNav()" href="/about/partners">Who we are</a></li>
+        	<li active-link="active-link" nav-state="faqs" style="padding: 10px 0;"><a style="font-size: 14px; color: #414146; padding-left: 20px;" ng-click="hideNav()" href="/about/faqs">FAQs</a></li>
+        	<li active-link="active-link" nav-state="contact" style="padding: 10px 0;"><a style="font-size: 14px; color: #414146; padding-left: 20px;" ng-click="hideNav()" href="/about/contact">Contact Us</a></li>
+        </ul>
+        <li active-link="active-link" class="side-mnav-item"><a href ng-click="goToBlog();">Blog</a></li>
+        <li active-link="active-link" nav-state="projects" class="side-mnav-item"><a ng-click="hideNav()" 
+            href="/projects">Projects</a></li>
+         <li class="side-mnav-item" ng-show="showLogout"><a ng-click="logout()" href="/projects">Logout</a></li>
+    </ul>
+</div>
+
