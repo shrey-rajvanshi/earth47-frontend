@@ -2,3 +2,4 @@ _build/
 bower_components/
 node_modules/
 package-lock.json
+*.DS_Store*

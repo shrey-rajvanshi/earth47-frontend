@@ -41,7 +41,6 @@
           method: {},
           event: {
             beforeChange: function (event, slick, currentSlide, nextSlide) {
-              
             }
           }
         };

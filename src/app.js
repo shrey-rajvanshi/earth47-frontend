@@ -3,6 +3,7 @@
   var module = angular.module('earth47App', [
     'ui.router',
     'Home.Controller',
+    'SolarHome.Controller',
     'About.Controller',
     'ProjectsListing.Controller',
     'ProjectDetail.Controller',
@@ -26,6 +27,10 @@
           url: '/',
           templateUrl: 'src/templates/home.html',
           controller: 'homeController'
+        }).state('solarhome', {
+          url: '/solar',
+          templateUrl: 'src/templates/solarHome.html',
+          controller: 'solarHomeController'
         }).state('about', {
           url: '/about',
           templateUrl: 'src/templates/about.html',

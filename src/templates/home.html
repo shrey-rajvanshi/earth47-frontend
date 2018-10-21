@@ -18,8 +18,8 @@
         });
         if (nextimage === 1) {
             if (isMobile) {
-                $('.home-view .top-block').css('background-position', 'left -165px bottom -12px');   
-                $('.home-view .top-block').css('background-size', 'cover');  
+                $('.home-view .top-block').css('background-position', 'left -165px bottom -12px');
+                $('.home-view .top-block').css('background-size', 'cover');
             } else {
                 $('.home-view .top-block').css('background-position', 'right -150px bottom -30px');
             }
@@ -27,67 +27,38 @@
         } else {
              if (isMobile) {
                 $('.home-view .top-block').css('background-position', 'right 25% bottom 0');   
-                $('.home-view .top-block').css('background-size', 'cover');   
+                $('.home-view .top-block').css('background-size', 'cover');
              } else {
-               $('.home-view .top-block').css('background-position', 'unset');   
+               $('.home-view .top-block').css('background-position', 'unset');
              }
              $('.home-view .home-main-header').text('Crowdfunding to fight climate change.')
         }
         nextimage++;
     }
+
 </script>
-<div class="home-view">
+<div class = "solar-view">
     <div class="top-block">
         <div class="section-header">
-            <div class="text-block">
+            <div class="header-block">
                 <div style="color: #88D20B;" class="header-text-item">GO</div>
                 <div style="color: #88D20B;" class="header-text-item">SOLAR.</div>
                 <div style="color: #88D20B;" class="header-text-item">NEVER</div>
                 <div style="color: #88D20B;" class="header-text-item">PAY FOR</div>
                 <div style="color: #88D20B;" class="header-text-item">ELECTRICITY</div>
                 <div style="color: #88D20B;" class="header-text-item">AGAIN.</div>
-                <div class="view-projects-button-block">
-                    <button class="btn btn-primary view-projects-button" ng-click="goToHowThisWorks();">LEARN MORE</button>
-                </div>
             </div>
-            <div class="image-block">
-                <img class="solar-panel-image image-load" src="src/images/illustrations/solar-panel.JPG"></img>
+            <div class="view-projects-button-block">
+                <button class="btn btn-primary view-projects-button" ng-click="goToHowThisWorks();">LEARN MORE</button>
             </div>
         </div>
+        <div class="image-block">
+          <div class="solar-panel-image"></div>
+        </div>
+    </div>
     </div>
     <div class="website-max-width">
         <div class="how-it-works-block">
-            <p class="block-title">HOW IT WORKS</p>
-            <div class="working-main-block">
-                <div class="working-block padding-left-15">
-                    <div class="text-align-center">
-                        <img class="how-it-works-image margin-top-20 image-load" src="src/images/illustrations/how-it-works-1.svg">
-                    </div>
-                    <div class="working-detail">
-                        <p class="font-weight-bold font-size-19">Select projects</p>
-                        <p>Our team selects highest quality CO<sub>2</sub> reducing projects from across the globe. Projects range from biogas to more efficient cookstoves to afforestation and more.</p>
-                    </div>
-                </div>
-                <div class="working-block padding-left-30">
-                    <div class="text-align-center">
-                        <img class="how-it-works-image image-load" src="src/images/illustrations/weighing-scale.svg">
-                    </div>
-                    <div class="working-detail">
-                        <p class="font-weight-bold font-size-19">Verify impact</p>
-                        <p>Each project has to meet a rigorous standard to ensure there is a measurable reduction in CO<sub>2</sub>. Verification reports are available on each project's page.</p>
-                    </div>
-                </div>
-                <div class="working-block padding-left-30">
-                    <div class="text-align-center">
-                        <img class="how-it-works-image margin-top-20 image-load" src="src/images/illustrations/how-it-works-2.svg">
-                    </div>
-                    <div class="working-detail">
-                        <p class="font-weight-bold font-size-19">Crowdfund to reduce emissions</p>
-                        <p>Your contribution offsets your carbon footprint and helps the projects remain financially viable. 90% of each contribution goes directly to the project.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="btn btn-primary read-more-button" ng-click="goToHowThisWorks();">READ MORE</button>
         </div>
         <p class="testimonials-title">TESTIMONIALS</p>
         <div class="testimonials-block">

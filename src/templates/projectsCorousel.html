@@ -1,5 +1,5 @@
 <div class="projects-support-block">
-    <p class="block-title">Projects we support</p>
+    <p class="block-title">Our projects</p>
     <slick infinite="true" slides-to-scroll="1"
         settings="slickConfig" ng-if="projectsArray.length">
         <div class="slide-content" ng-repeat="thisProject in projectsArray">
@@ -12,19 +12,19 @@
                     <p class="project-description">
                         {{thisProject.name}}
                     </p>
-                    <div class="project-progress-bar">
+                    <!-- <div class="project-progress-bar">
                         <div class="progress-completed" ng-style="{width: thisProject.goal_acheived}"></div>
                     </div>
-                    <div class="goal-acheived">{{thisProject.goal_acheived}} goal acheived</div>
+                    <div class="goal-acheived">{{thisProject.goal_acheived}} goal achieved</div>
                     <div class="project-stats">
                         <p class="project-detail-common font-weight-bold">₹{{thisProject.achieved_funding}} <span class="font-size-10">collected by 240 people</span></p>
                         <p class="project-detail-common font-weight-bold">₹{{thisProject.target_funding}} <span class="font-size-10">goal</span></p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </slick>
-    <div class="view-projects-footer">
+   <!--  <div class="view-projects-footer">
         <button class="btn btn-primary view-projects-button" ng-click="goToViewProjects();">VIEW MORE PROJECTS</button>
-    </div>
+    </div> -->
 </div>

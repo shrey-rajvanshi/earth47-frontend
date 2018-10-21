@@ -1,0 +1,83 @@
+.solar-view {
+    margin-top: 4.3em;
+    display: block;
+
+    .top-block {
+    	width:100%;
+    	display:flex;
+        margin-top: 10vh;
+    
+        .section-header {
+            font-size: 60px;
+            font-weight: bold;
+            width: 36%;
+            padding: 34px;
+            padding-left: 65px;
+
+            .header-block {
+               margin-top: 45px;
+            }
+        }
+        .solar-panel-image {
+            background-image: url("../../src/images/illustrations/solar-panel.JPG");
+            width: 100%;
+            height: 85vh;
+            background-size: cover;
+        }
+
+        .image-block {
+            width:100%;
+        }
+    }
+
+    .block-item {
+        border: solid black;
+
+
+        .item-header {
+            color: #88D20B;
+            font-size: 36px;
+            font-weight: bold;
+        }
+    }
+
+}
+@media only screen and (max-width: 1200px) {
+    .top-block {
+        .header-block {
+            display:flex;
+        }
+        .section-header {
+          font-size: 54px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .solar-view {
+        .top-block {
+            display: block;
+
+            .section-header {
+                width: 100%;
+                font-size: 32px;
+                padding: 34px 20px;
+            
+
+                .header-block {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .header-text-item{
+                        margin-left: 5px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .image-block {
+                width:100%;
+            }
+        }
+    }
+}
