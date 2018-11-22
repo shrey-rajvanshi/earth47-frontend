@@ -5,17 +5,14 @@
     .top-block {
     	width:100%;
     	display:flex;
-        margin-top: 10vh;
-    
+        padding-top: 1vh;
         .section-header {
             font-size: 60px;
             font-weight: bold;
             width: 36%;
-            padding: 34px;
             padding-left: 65px;
 
             .header-block {
-               margin-top: 45px;
             }
         }
         .solar-panel-image {
@@ -29,18 +26,130 @@
             width:100%;
         }
     }
+    .why-us-block {
+        display: flex;
+        padding: 20px 70px;
+        justify-content: space-between;
+        margin-top: 60px;
+        .block-item {
+            width: 30%;
 
-    .block-item {
-        border: solid black;
+            .item-header {
+                color: #88D20B;
+                font-size: 36px;
+                font-weight: bold;
+            }
+            .item-description {
+                color: #414146;
+                font-size: 18px;
+                padding-top: 20px;
+            }
+            .item-list {
+                padding-top: 25px;
 
-
-        .item-header {
-            color: #88D20B;
-            font-size: 36px;
-            font-weight: bold;
+                .list-item {
+                    padding-bottom: 15px;
+                    .list-item-description {
+                        font-size: 16px;
+                        color: #414146;
+                    }
+                    .list-item-header {
+                        font-size: 28px ;
+                        color: #414146;
+                        font-size: 28px;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                    }
+                }
+            }
         }
     }
+    .how-it-works {
+        padding: 20px 70px;
+        .section-header {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
 
+        .background-illus {
+            background-image: url("../../src/images/illustrations/on-grid.jpg");
+            background-size: cover;
+            width: 60%;
+            height: 500px;
+            float: right;
+            max-width: 770px;
+        }
+        .main-block {
+            padding-top: 90px;
+            .float-right-block {
+                width: 60%;
+                float: right;
+                display: flex;
+                margin-top: -140px;
+
+                .hiw-block-item {
+                    width: 100%;
+                }
+                .inner-wrapper {
+                    padding-right: 0px;
+                }
+                .item-ext {
+                    font-size: 16px;
+                }
+            }
+            .hiw-block-item {
+                padding-bottom: 20px;
+                width: 35%;
+
+                .block-item-header {
+                    font-size: 32px;
+                    font-weight: bold;
+                    margin-bottom: 15px;
+                    .item-index {
+                        display: inline-flex;
+                        width: 40px;
+                        border-radius: 50%;
+                        height: 40px;
+                        background: #88D20B;
+                        color: #fff;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 20px;
+                        font-size: 28px;
+                    }
+                }
+                .block-item-description {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .contact-us-wrapper {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 150px;
+        .contact-us-header {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 1em;
+        }
+        .contact-us-block {
+            padding: 0 6%;
+            margin-bottom: 188px;
+            .contact-us-header {
+                font-size: 28px;
+                text-align: center;
+                margin-bottom: 1em;
+            }
+        }
+        .contact-inner-wrapper {
+             display: flex;
+            justify-content: space-between;
+        }
+    }
 }
 @media only screen and (max-width: 1200px) {
     .top-block {
@@ -54,7 +163,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-    
     .solar-view {
         .top-block {
             display: block;
@@ -77,6 +185,57 @@
             }
             .image-block {
                 width:100%;
+            }
+            .header-block {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        .why-us-block {
+            flex-direction: column;
+            padding: 20px;
+            margin-top: 30px;
+            .block-item {
+                width: 100%;
+                .item-header {
+                    font-size: 32px;
+                }
+                .item-description {
+                    font-size: 16px;
+                }
+            }
+        }
+        .how-it-works {
+            padding: 20px;
+            .background-illus {
+                float: none;
+                height: 210px;
+                width: 100%;
+            }
+            .main-block {
+                .hiw-block-item {
+                    width: 100%;
+                    .block-item-description {
+                        font-size: 16px;
+                    }
+                    .block-item-header {
+                        font-size: 28px;
+                    }
+                }
+                .float-right-block {
+                    float: none;
+                    margin-top: 0;
+                    display: block;
+                    width: 100%;
+                    .inner-wrapper {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+        .contact-us-wrapper {
+            .contact-inner-wrapper {
+                flex-direction: column;
             }
         }
     }
