@@ -13,7 +13,6 @@
             padding-left: 65px;
 
             .header-block {
-                padding-top: 65px;
             }
         }
         .solar-panel-image {
@@ -162,6 +161,7 @@
     .top-block {
         .header-block {
             display:flex;
+            padding-top: 65px;
         }
         .section-header {
           font-size: 54px;
