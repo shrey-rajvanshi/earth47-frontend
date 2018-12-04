@@ -10,8 +10,8 @@ angular.module('DesktopNav.Directive', []).
               $('.navbar-default.main-nav').removeClass('nav-padding-top');
               $('.nav-wrap').addClass('nav-wrap-height');
               $('.navbar-default.main-nav').addClass('nav-padding-top-6');
-              var opacity = 1 - (136 - this.pageYOffset)/136;
-              $(".sticky-nav").css("background-color", "rgba(255,255,255," + opacity + ")");
+              //var opacity = 1 - (136 - this.pageYOffset)/136;
+              //$(".sticky-nav").css("background-color", "rgba(255,255,255," + opacity + ")");
             } else {
               element.find('nav').removeClass('sticky-nav');
               $('.nav-wrap').removeClass('sticky-nav');
