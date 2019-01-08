@@ -64,6 +64,7 @@
   "dependencies": {
     "bower": "^1.8.2",
     "connect-history-api-fallback": "^1.5.0",
+    "gulp-imagemin": "^3.4.0",
     "gulp-sass": "^3.2.1"
   }
 }
