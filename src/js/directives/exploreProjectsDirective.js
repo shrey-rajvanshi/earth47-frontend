@@ -44,7 +44,7 @@
           $rootScope.fullViewLoader.showLoader();
           $http({
             method: 'GET',
-            url: 'https://api.earth47.com/api/projects',
+            url: 'http://api.earth47.com/api/projects',
           }).then(function(response) {
             $scope.projectsArray = response.data.projects;
             $scope.projectsArray = $scope.projectsArray.filter(function (project) {
