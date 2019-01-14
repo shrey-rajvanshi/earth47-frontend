@@ -8,7 +8,7 @@
     function ($http) {
       var currentData = '',
         manipulator,
-        baseUrl = 'http://api.earth47.com/api'
+        baseUrl = 'https://api.earth47.com/api'
 
       function ProjectsModel() {
         this.projects = [];
