@@ -2,27 +2,25 @@
     <slick infinite="true" slides-to-scroll="1"
         settings="slickConfig" ng-if="blogs.length">
         <div class="slide-content" ng-repeat="thisBlog in blogs">
-            <a href = "{{thisBlog.link}}">
-                <div class="blogs-card-block">
-                    <img class="title-image" ng-src="{{thisBlog.image_id}}">
-                    <div class="user-data-block">
-                        <div><img class="views-icon" src="../src/images/illustrations/view.svg">{{thisBlog.views}}</div>
-                        <div class="display-flex">
-                            <div class="comments"><img src="../src/images/illustrations/comments.svg">20</div>
-                            <div><img src="../src/images/illustrations/hearts.svg">{{thisBlog.likes}}</div>
-                        </div>
-                    </div>
-                    <div class="blog-details">
-                        <div class="blog-categories">
-                            {{thisBlog.categories}}
-                        </div>
-                        <p class="blog-title">{{thisBlog.name}}</p>
-                        <p class="blog-description">
-                            {{thisBlog.content}}
-                        </p>
+            <div class="blogs-card-block">
+                <img class="title-image" ng-src="{{thisBlog.image_id}}">
+                <div class="user-data-block">
+                    <div><img class="views-icon" src="../src/images/illustrations/view.svg">{{thisBlog.views}}</div>
+                    <div class="display-flex">
+                        <div class="comments"><img src="../src/images/illustrations/comments.svg">20</div>
+                        <div><img src="../src/images/illustrations/hearts.svg">{{thisBlog.likes}}</div>
                     </div>
                 </div>
-            </a>
+                <div class="blog-details">
+                    <div class="blog-categories">
+                        {{thisBlog.categories}}
+                    </div>
+                    <a href="blog/{{thisBlog.link}}" target="_blank"><p class="blog-title">{{thisBlog.name}}</p></a>
+                    <p class="blog-description">
+                        {{thisBlog.content}}
+                    </p>
+                </div>
+            </div>
         </div>
     </slick>
 </div>
