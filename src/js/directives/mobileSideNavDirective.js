@@ -32,7 +32,7 @@ angular.module('MobileSideNav.Directive', []).
         };
 
         $scope.goToBlog = function() {
-          window.location.replace('/blog')
+          window.location = "https://blog.earth47.com"
         };
         $scope.projectsModel = new ProjectsModel().getInstance();
         $scope.projectsModel.getSession().then(function (data) {

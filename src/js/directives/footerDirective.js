@@ -11,7 +11,7 @@ angular.module('Footer.Directive', []).
         $scope.hideNewsletter = $rootScope.hideNewsletter;
         $scope.projectsModel = new ProjectsModel().getInstance();
         $scope.goToBlog = function() {
-          window.location.replace('/blog')
+          window.location = "https://blog.earth47.com"
         };
         $scope.subscribe = function () {
           if(!newsLetterForm[0].validity.valid) {

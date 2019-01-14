@@ -56,7 +56,7 @@ angular.module('DesktopNav.Directive', []).
       controller: ['$scope', '$rootScope', '$state', function ($scope, $rootScope, $state) {
         $scope.hideMainNav = $rootScope.hideMainNav;
         $scope.goToBlog = function() {
-          window.location.replace('/blog')
+          window.location = "https://blog.earth47.com"
         };
       }]
     };
