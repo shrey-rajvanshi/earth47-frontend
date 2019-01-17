@@ -9,7 +9,8 @@
       font-size: 60px;
       font-weight: bold;
       width: 36%;
-      padding-left: 65px; }
+      padding-left: 65px;
+      padding-top: 50px; }
     .solar-view .top-block .solar-panel-image {
       background-image: url("../../src/images/illustrations/solar-panel.JPG");
       width: 100%;
