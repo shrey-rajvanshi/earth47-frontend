@@ -4,6 +4,3 @@ Frontend repo for solar site for earth47
 # gulp
 
 
-Brochure-like solar site
-
-
